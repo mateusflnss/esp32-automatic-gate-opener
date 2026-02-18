@@ -1,55 +1,52 @@
-# Prerequisites
-*.d
 
-# Object files
-*.o
-*.ko
-*.obj
+build/
+build-*/
+*.bin
 *.elf
-
-# Linker output
-*.ilk
 *.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
+*.uf2
 *.hex
+*.lst
+*.sym
+*.size
+*.json
+*.json.gz
+*.fw
+*.partitions.bin
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+sdkconfig
+sdkconfig.old
+sdkconfig.*
+!sdkconfig.defaults
+!sdkconfig.defaults.*
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+.espressif/
+components/espressif__*/.component/
+managed_components/
 
-# debug information files
-*.dwo
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+compile_commands.json
+
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+.vscode/
+
+docs/_build/
+docs/build/
+
