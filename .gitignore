@@ -1,6 +1,19 @@
-
+# ESP-IDF / Espressif generated & temporary files
 build/
 build-*/
+sdkconfig
+sdkconfig.old
+sdkconfig.*
+!sdkconfig.defaults
+!sdkconfig.defaults.*
+.espressif/
+managed_components/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pyo
+
+# Binaries and artifacts
 *.bin
 *.elf
 *.map
@@ -14,39 +27,51 @@ build-*/
 *.fw
 *.partitions.bin
 
-sdkconfig
-sdkconfig.old
-sdkconfig.*
-!sdkconfig.defaults
-!sdkconfig.defaults.*
-
-.espressif/
-components/espressif__*/.component/
-managed_components/
-
+# CMake / build caches
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 *.cmake
 compile_commands.json
 
+# Python / tooling caches
 .venv/
 venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.pytest_cache/
 .mypy_cache/
+.pip/
+pip-log.txt
 
-*.log
-*.tmp
-*.bak
+# Editor / IDE files (very common to leak)
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
 *.swp
 *~
 
-.vscode/
+# Logs & temporary files
+*.log
+*.tmp
+*.bak
 
+# If you ever add documentation generation
 docs/_build/
 docs/build/
 
+# Project-specific / personal ignores (add your own here)
+# scripts/local/
+# backup/
+# old/
+
+# Keep these under version control (examples)
+# !CMakeLists.txt
+# !main/*.c
+# !main/*.h
+# !components/*/CMakeLists.txt
+# !Kconfig.projbuild
+# !partitions.csv
+# !README.md
+# !LICENSE
