@@ -1,19 +1,27 @@
-# ESP-IDF / Espressif generated & temporary files
-build/
-build-*/
+# ESP-IDF build output (ignore at any depth)
+**/build/
+**/build-*/
 sdkconfig
 sdkconfig.old
 sdkconfig.*
 !sdkconfig.defaults
 !sdkconfig.defaults.*
 .espressif/
+**/.espressif/
+
+# ESP-IDF Component Manager cache (regenerates on build)
 managed_components/
+**/managed_components/
+
+# Python caches
 .pytest_cache/
+**/.pytest_cache/
 __pycache__/
+**/__pycache__/
 *.pyc
 *.pyo
+*.pyd
 
-# Binaries and artifacts
 *.bin
 *.elf
 *.map
@@ -27,51 +35,76 @@ __pycache__/
 *.fw
 *.partitions.bin
 
-# CMake / build caches
+# Core dumps / debug artifacts
+core
+core.*
+**/coredump*/
+**/coredump*.*
+.gdb_history
+
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 *.cmake
 compile_commands.json
 
-# Python / tooling caches
 .venv/
 venv/
 .mypy_cache/
 .pip/
 pip-log.txt
 
-# Editor / IDE files (very common to leak)
+# Coverage / profiling
+coverage/
+**/coverage/
+*.gcda
+*.gcno
+*.gcov
+
 .vscode/
 .idea/
 *.code-workspace
 *.sublime-project
 *.sublime-workspace
+.vs/
+.fleet/
+.project
+.classpath
+.settings/
 .DS_Store
 Thumbs.db
+Desktop.ini
+*.lnk
 *.swp
 *~
 
-# Logs & temporary files
 *.log
 *.tmp
 *.bak
+*.orig
+*.rej
 
-# If you ever add documentation generation
+# Local env / secrets (avoid accidentally uploading credentials)
+.env
+.env.*
+*.env
+*.env.*
+secrets.*
+*.secrets.*
+**/secrets.*
+*.key
+*.pem
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+*.jks
+
 docs/_build/
 docs/build/
 
-# Project-specific / personal ignores (add your own here)
-# scripts/local/
-# backup/
-# old/
-
-# Keep these under version control (examples)
-# !CMakeLists.txt
-# !main/*.c
-# !main/*.h
-# !components/*/CMakeLists.txt
-# !Kconfig.projbuild
-# !partitions.csv
-# !README.md
-# !LICENSE
+# Misc caches
+**/.cache/
+**/.clangd/
+**/.gradle/
