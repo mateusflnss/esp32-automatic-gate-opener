@@ -1,4 +1,6 @@
 **Dockerfile**
+**.clangd
+**dependencies.lock
 
 # ESP-IDF build output (ignore at any depth)
 **/build/
