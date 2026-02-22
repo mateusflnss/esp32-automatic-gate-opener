@@ -1,11 +1,13 @@
+**Dockerfile**
+
 # ESP-IDF build output (ignore at any depth)
 **/build/
 **/build-*/
-sdkconfig
-sdkconfig.old
-sdkconfig.*
-!sdkconfig.defaults
-!sdkconfig.defaults.*
+**sdkconfig
+**sdkconfig.old
+**sdkconfig.*
+**!sdkconfig.defaults
+**!sdkconfig.defaults.*
 .espressif/
 **/.espressif/
 
