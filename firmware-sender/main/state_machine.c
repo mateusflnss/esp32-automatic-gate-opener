@@ -25,7 +25,7 @@ static const state_func_t state_table[STATE_COUNT] = {
 
 /* --------------------------------------------------------------------------
  * State implementations
- * Each state performs one iteration and yields via vTaskDelay
+ * Each state performs one iteration and returns to the main loop for event handling
  * -------------------------------------------------------------------------- */
 
 static void state_idle(void) {
